@@ -1,6 +1,10 @@
-$dark: #2b2d4a;
-$border: #6e6e89;
-$white: #f5f5f2;
+@import "/src/assets/colour-variables.scss";
+@import '/src/assets/breakpoints.scss';
+
+
+::placeholder {
+  color: $dark;
+}
 
 .container {
   display: flex;
@@ -9,6 +13,10 @@ $white: #f5f5f2;
   align-items: flex-start;
   width: 55%;
   margin: auto;
+
+  @media (max-width: $mobile) {
+    width: 90%;
+  }
 
   &__content {
     display: flex;
@@ -23,9 +31,6 @@ $white: #f5f5f2;
     font-weight: lighter;
   }
 
-  &__form-container {
-  }
-
   &__form {
     display: flex;
     flex-direction: column;
@@ -33,11 +38,12 @@ $white: #f5f5f2;
   }
 
   &__input {
-    border: 1px solid rgba(110, 110, 137, 1);
+    border: 1px solid $border;
     border-radius: 8px;
     padding: 0.5em 1em;
     font-family: "PT Sans";
     font-size: 1rem;
+    font-weight: bold;
   }
 
   &__button {
@@ -49,24 +55,14 @@ $white: #f5f5f2;
     font-weight: bold;
     font-size: 16px;
     border-radius: 8px;
-    background-color: rgba(96, 51, 146, 1);
+    background-color: $darkPurple;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
 
     &:hover {
       cursor: pointer;
     }
-  }
-
-
-
-  &__back {
-    display: flex;
-    align-items: flex-end;
-    align-items: center;
-    color: #773EB5;
-  }
-  &__link {
-    margin: 0;
-    font-weight: bold;
-    font-family: "PT Sans";
   }
 }

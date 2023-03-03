@@ -1,3 +1,7 @@
+@import '/src/assets/colour-variables.scss';
+@import '/src/assets/breakpoints.scss';
+
+
 .container {
   &__buttons {
     display: flex;
@@ -5,6 +9,10 @@
     gap: 1em;
     width: 55%;
     margin: auto;
+
+    @media (max-width: $mobile) {
+      width: 90%;
+    }
   }
 
   &__text {
@@ -14,7 +22,7 @@
 
   &__link {
     font-weight: bold;
-    color: #773EB5;
+    color: $lightPurple;
     margin: 0;
   }
 
@@ -28,7 +36,7 @@
       font-size: 16px;
       color: #3b5998;
       border-radius: 8px;
-      border: 1px solid #3b5998;
+      border: 1px solid $darkBlue;
       padding: 0.75em 3.5em;
       background-color: transparent;
 
@@ -44,9 +52,9 @@
       gap: 0.5em;
       width: 100%;
       font-size: 16px;
-      color: #3e82f7;
+      color: $lightBlue;
       border-radius: 8px;
-      border: 1px solid #3e82f7;
+      border: 1px solid $lightBlue;
       padding: 0.75em 3.5em;
       background-color: transparent;
 
