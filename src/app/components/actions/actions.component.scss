@@ -6,17 +6,54 @@
     width: 55%;
     margin: auto;
   }
+
+  &__text {
+    color: #2b2d4a;
+    margin: 0;
+  }
+
+  &__link {
+    font-weight: bold;
+    color: #773EB5;
+    margin: 0;
+  }
+
   &__button {
-    display: flex;
-    justify-content: center;
-    gap: 0.5em;
-    width: 100%;
-    font-size: 16px;
-    color: #3e82f7;
-    border-radius: 8px;
-    border: 1px solid #3e82f7;
-    padding: 0.75em 3.5em;
-    background-color: transparent;
+    &--google {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5em;
+      width: 100%;
+      font-size: 16px;
+      color: #3b5998;
+      border-radius: 8px;
+      border: 1px solid #3b5998;
+      padding: 0.75em 3.5em;
+      background-color: transparent;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &--fb {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5em;
+      width: 100%;
+      font-size: 16px;
+      color: #3e82f7;
+      border-radius: 8px;
+      border: 1px solid #3e82f7;
+      padding: 0.75em 3.5em;
+      background-color: transparent;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
 
     img {
       width: 1em;
